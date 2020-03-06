@@ -89,6 +89,8 @@ from .xpath import read_xpath
 # import exceptions
 from selenium.common.exceptions import NoSuchElementException
 from .exceptions import InstaPyError
+# UBot spyder support
+import instapy.ubot_spyder_runner
 
 
 class InstaPy:
@@ -4491,6 +4493,8 @@ class InstaPy:
             message = "Session ended!"
             highlight_print(self.username, message, "end", "info", self.logger)
             print("\n\n")
+            # # UBot spyder initialization from ubot_spyder_runner module
+            instapy.ubot_spyder_runner.UBotRunner.run(account=self.username, test=False)
 
     def follow_by_locations(
         self,

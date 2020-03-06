@@ -1504,6 +1504,8 @@ def verify_username_by_id(browser, username, person, person_id, logger, logfolde
 def verify_action(
     browser, action, track, username, person, person_id, logger, logfolder
 ):
+    print('Waiting for verification...')
+    sleep(10)
     """ Verify if the action has succeeded """
     # currently supported actions are follow & unfollow
 

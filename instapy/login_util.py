@@ -286,7 +286,7 @@ def login_user(
         for cookie in pickle.load(
             open("{0}{1}_cookie.pkl".format(logfolder, username), "rb")
         ):
-            browser.add_cookie(cookie)
+            #browser.add_cookie(cookie) # This line has been commented because sometimes instagram blocks actions checking coockies
             cookie_loaded = True
     except (WebDriverException, OSError, IOError):
         print("Cookie file not found, creating cookie...")
